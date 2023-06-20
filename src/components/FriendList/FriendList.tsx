@@ -1,6 +1,7 @@
 import { FriendListProps } from "./FriendList.types";
 import styles from "./FriendList.module.scss";
 import {useState} from "react";
+import Button from "../Button/Button";
 
 const FriendList = ({name, age, address, hobbies}: FriendListProps) => {
 
@@ -20,10 +21,12 @@ const FriendList = ({name, age, address, hobbies}: FriendListProps) => {
             {
                 hobbies.map((hobby, index) => <h3 key = {index}>{hobby}</h3>)
             }
-            <button onClick = {handleIncrementAge}>Increment Age</button>
+            {/* <button onClick = {handleIncrementAge}>Increment Age</button> */}
+            <Button buttonName={"Increment Age"} event={handleIncrementAge}/>
             
         </div>
     )
 }
+
 
 export default FriendList;
