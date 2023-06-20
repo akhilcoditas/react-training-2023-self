@@ -1,30 +1,36 @@
-import { Component, ReactNode } from "react";
-import Friend from "./components/Friends/Friend";
-import Box from "./components/Box/box";
-import { BoxComponent } from "./components/Box/box";
+import FriendList from "./components/FriendList/FriendList";
 
-// Functional component
+const friendDetails = [
+  {
+    id: 1,
+    name: "Akhil Sachan",
+    address: "Indore",
+    age: 22,
+    hobbies: ["Cricket", "Chess"],
+  },
+  {
+    id: 2,
+    name: "Arjun Kesharwani",
+    address: "Prayagraj",
+    age: 23,
+    hobbies: ["Football", "Swimming"],
+  },
+  {
+    id: 3,
+    name: "Aniruddha Gohad",
+    address: "Pune",
+    age: 35,
+    hobbies: ["Chess", "Teaching", "Coding"],
+  }
+]
 const App = () => {
   return (
     <div>
-      <h1>Hello Akhil</h1>
-      <div>
-        <p className="friend">this is not friend component</p>
-      </div>
-      <Friend />
-      <Box/>
-      <Box/>
-      <Box/>
-      <BoxComponent/>
+      {
+        friendDetails.map((friend) => <FriendList key = {friend.id} {...friend}/>)
+      }
     </div>
   );
 };
-
-//Class Component
-export class AppComponent extends Component {
-  render(): ReactNode {
-    return <h1>Hello Akhil Class</h1>;
-  }
-}
 
 export default App;

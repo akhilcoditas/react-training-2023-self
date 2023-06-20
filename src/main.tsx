@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App, { AppComponent } from './App.tsx'
+import App from './App.tsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
     {/* In case of  class component what react does giving example;
       const html =  new App({}) and pass blank object to for default constructor AppComponent */}
-    <AppComponent/>
+
   </React.StrictMode>,
 )
